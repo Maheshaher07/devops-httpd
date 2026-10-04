@@ -1,0 +1,5 @@
+---
+# vars file for httpd
+file_path: /var/www/html/index.html
+pkg: httpd
+svc: httpd

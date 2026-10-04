@@ -1,0 +1,15 @@
+---
+# tasks file for httpd
+- name: installation of httpd
+  ansible.builtin.dnf:
+    name: "{{pkg}}"
+    state: present
+- name: start and enable
+  ansible.builtin.service:
+    name : "{{svc}}"
+    state: started
+    enabled: true
+- name : Deployment
+  ansible.builtin.copy:
+    src: files/index.html
+    dest: "{{file_path}}"
